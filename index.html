@@ -30,6 +30,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-W789JN7');</script>
   <!--  End Google Tag Manager  -->
   <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie.js"></script>
+  
+    <script>
+var track = document.getElementById('track');
+var controlBtn = document.getElementById('play-pause');
+function playPause() {
+    if (track.paused) {
+        track.play();
+        //controlBtn.textContent = "Pause";
+        controlBtn.className = "pause";
+    } else { 
+        track.pause();
+         //controlBtn.textContent = "Play";
+        controlBtn.className = "play";
+    }
+}
+controlBtn.addEventListener("click", playPause);
+track.addEventListener("ended", function() {
+  controlBtn.className = "play";
+});
+</script>
+  
   <style>
     #map img {  
     max-width: none;   
@@ -221,24 +242,7 @@ function concatValues( obj ) {
   return value;
 }
 
-  <script>
-var track = document.getElementById('track');
-var controlBtn = document.getElementById('play-pause');
-function playPause() {
-    if (track.paused) {
-        track.play();
-        //controlBtn.textContent = "Pause";
-        controlBtn.className = "pause";
-    } else { 
-        track.pause();
-         //controlBtn.textContent = "Play";
-        controlBtn.className = "play";
-    }
-}
-controlBtn.addEventListener("click", playPause);
-track.addEventListener("ended", function() {
-  controlBtn.className = "play";
-});
-</script>
+
+  </script>
 </body>
 </html>
