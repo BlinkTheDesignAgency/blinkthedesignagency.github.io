@@ -8242,6 +8242,7 @@ blockquote {
   bottom: 0%;
   left: 0%;
   right: auto;
+  visibility: hidden;
 }
 
 .text-span-11 {
